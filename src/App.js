@@ -26,12 +26,12 @@ const theme = createTheme({
             text: '$draculaForeground',
             primaryLight: '$draculaSelection',
             primaryLightHover: '$draculaComment',
-            primaryLightActive: '$draculaComment',
-            primaryLightContrast: '$draculaComment',
+            primaryLightActive: '$draculaSelection',
+            primaryLightContrast: '$draculaSelection',
             primary: '$draculaPurple',
             primaryBorder: '$draculaPurple',
-            primaryBorderHover: '$draculaPurple',
-            primarySolidHover: '$draculaPurple',
+            primaryBorderHover: '$draculaPink',
+            primarySolidHover: '$draculaPink',
             primarySolidContrast: '$draculaForeground',
             primaryShadow: '$draculaPurple',
 
@@ -50,7 +50,7 @@ function App() {
     return (
         <NextUIProvider theme={theme}>
             <div id="niklas-birk-root">
-                <img alt="Niklas logo" src={logo}/>
+                <img id="logo" alt="Niklas logo" src={logo}/>
                 <div>
                     <h1>Work in Progress</h1>
                     Das ist eine Seite im Aufbau.
