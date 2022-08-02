@@ -1,10 +1,10 @@
-import logo from './logo.svg';
+import logo from './assets/niklas-birk-logo.png';
 import './App.css';
 
 import { createTheme, NextUIProvider } from "@nextui-org/react"
 
 const theme = createTheme({
-  type: "dark", // it could be "light" or "dark"
+  type: "dark",
   theme: {
     colors: {
       // color names
@@ -49,21 +49,22 @@ const theme = createTheme({
 function App() {
   return (
       <NextUIProvider theme={theme}>
-        <div className="App">
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <p>
-              Edit <code>src/App.js</code> and save to reload.
-            </p>
-            <a
-                className="App-link"
-                href="https://reactjs.org"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-              Learn React
-            </a>
-          </header>
+        <div id="niklas-birk-root">
+          <img alt="Niklas logo" src={logo} />
+          <div>
+            <h1>Work in Progress</h1>
+            Das ist eine Seite im Aufbau.
+            <br /><br />
+            Wichtige links:
+            <ul>
+              <li> Mail an <a href="mailto://niklas.birk@niklas-birk.de"> niklas.birk@niklas-birk.de </a></li>
+              <li> Meine self-hosted git repositories bei <a href="https://git.niklas-birk.de">Gitea</a></li>
+              <li> Mein self-hosted <a href="https://blog.niklas-birk.de">Blog</a></li>
+              <li> Meine self-hosted <a href="https://survey.niklas-birk.de">Umfragen</a></li>
+              <li> ...</li>
+            </ul>
+          </div>
+          <a href={process.env.PUBLIC_URL + 'impressum.html'}>Impressum und Datenschutz</a>
         </div>
       </NextUIProvider>
   );
