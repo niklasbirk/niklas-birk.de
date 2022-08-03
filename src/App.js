@@ -50,7 +50,7 @@ function App() {
     return (
         <NextUIProvider theme={theme}>
             <div id="niklas-birk-root">
-                <img id="logo" alt="Niklas logo" src={logo}/>
+                <img id="logo" alt="Ein Logo von Niklas Birk" src={logo}/>
                 <div>
                     <h1>Work in Progress</h1>
                     Das ist eine Seite im Aufbau.
