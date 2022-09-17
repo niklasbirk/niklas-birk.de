@@ -1,10 +1,9 @@
-import {Image, Spacer, Text} from "@nextui-org/react";
+import {Image, Text} from "@nextui-org/react";
 import logo from "../assets/niklas-birk-logo.png";
 
 function Header() {
     return (
         <>
-            <Spacer y={3} />
             <Image
                 src={logo}
                 width={200}
@@ -20,7 +19,6 @@ function Header() {
                 weight="bold">
                 Niklas Birk
             </Text>
-            <Spacer y={2} />
         </>
     );
 }
