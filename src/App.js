@@ -10,6 +10,7 @@ const theme = createTheme({
             // color names
             draculaBackground: '#282a36',
             draculaCurrentLine: '#44475a',
+            draculaCurrentLineAlpha: '#44475a66',
             draculaSelection: '#44475a',
             draculaForeground: '#f8f8f2',
             draculaComment: '#6272a4',
