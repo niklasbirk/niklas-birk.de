@@ -1,19 +1,25 @@
-import {Link} from "@nextui-org/react";
+import {Container, Link, Row} from "@nextui-org/react";
 
 function Footer() {
     return (
-        <Link
-            href={process.env.PUBLIC_URL + 'impressum.html'}
-            block
-            css={{
-                position: "fixed",
-                bottom: 0,
-                right: 0,
-                textAlign: "center",
-                margin: 15
-            }}>
-            Impressum und Datenschutz
-        </Link>
+        <Container>
+            <Row
+                justify="center"
+                align="center">
+                <Link
+                    href={process.env.PUBLIC_URL + 'impressum.html'}
+                    block
+                    css={{
+                        bottom: 0,
+                        textAlign: "center",
+                        margin: 15,
+                        zIndex: 1,
+                        bgBlur: "$draculaCurrentLineAlpha"
+                    }}>
+                    Impressum und Datenschutz
+                </Link>
+            </Row>
+        </Container>
     );
 }
 
