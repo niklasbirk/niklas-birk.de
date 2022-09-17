@@ -1,53 +1,51 @@
-import {Card, Col, Text} from "@nextui-org/react";
+import {Button, Card, Col, Row, Text} from "@nextui-org/react";
 
 function ServiceCard(props) {
     return (
-        <Card isPressable>
-            <Card.Header css={{ position: "absolute", zIndex: 1, top: 5}}>
+        <Card isPressable isHoverable onClick={() => window.open(props.url)}>
+            <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
                 <Col>
-                    <Text size={12} weight="bold" transform="uppercase">
+                    <Text color='$draculaCyan' size={12} weight="bold" transform="uppercase">
                         {props.introText}
                     </Text>
-                    <Text h3>
+                    <Text color='$draculaCyan' h3>
                         {props.serviceText}
                     </Text>
-                    <Text size={12} weight="bold" transform="uppercase">
+                    <Text color='$draculaCyan' size={12} weight="bold" transform="uppercase">
                         {props.vendorText}
                     </Text>
                 </Col>
             </Card.Header>
-            <Card.Body css={{ p: 0 }}>
+            <Card.Body>
                 <Card.Image
                     src={props.logo}
-                    // width="50%"
-                    // height="50%"
                     objectFit="fill"
                     alt="Card example background"
                 />
             </Card.Body>
-            {/*<Card.Footer*/}
-            {/*    isBlurred*/}
-            {/*    css={{*/}
-            {/*        position: "absolute",*/}
-            {/*        bgBlur: "$draculaCurrentLine",*/}
-            {/*        borderTop: "$borderWeights$light solid rgba(255, 255, 255, 0.2)",*/}
-            {/*        bottom: 0,*/}
-            {/*        zIndex: 1,*/}
-            {/*    }}>*/}
-            {/*    <Row justify="center">*/}
-            {/*        <Button flat auto rounded color="primary">*/}
-            {/*            <Text*/}
-            {/*                css={{*/}
-            {/*                    color: "inherit"*/}
-            {/*                }}*/}
-            {/*                size={12}*/}
-            {/*                weight="bold"*/}
-            {/*                transform="uppercase">*/}
-            {/*                Zu den Repositories*/}
-            {/*            </Text>*/}
-            {/*        </Button>*/}
-            {/*    </Row>*/}
-            {/*</Card.Footer>*/}
+            <Card.Footer
+                isBlurred
+                css={{
+                    position: "absolute",
+                    bgBlur: "$draculaCurrentLineAlpha",
+                    borderTop: "$borderWeights$light solid rgba(248, 248, 248, 0.5)",
+                    bottom: 0,
+                    zIndex: 1
+                }}>
+                <Row justify="center">
+                    <Button auto rounded color="primary" onClick={() => window.open(props.url)}>
+                        <Text
+                            css={{
+                                color: "inherit"
+                            }}
+                            size={12}
+                            weight="bold"
+                            transform="uppercase">
+                            {props.buttonText}
+                        </Text>
+                    </Button>
+                </Row>
+            </Card.Footer>
         </Card>
 
         // <div id="niklas-birk-root">
